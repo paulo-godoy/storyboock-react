@@ -1,24 +1,11 @@
 import React from "react";
-import "./App.css";
+import { AppRoutes } from "./routes/AppRoutes";
+import "./styles/global.scss";
 
-function App() {
+export const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <AppRoutes />
     </div>
   );
-}
-
-export default App;
+};

@@ -1,0 +1,82 @@
+@import "../../styles/global.scss";
+
+.dragon-details {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: $light-color7;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: $dark-color;
+
+  @media (max-width: 768px) {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  @media (max-width: 480px) {
+    padding: 15px;
+    max-width: 100%;
+    margin: 20px auto;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: $dark-color;
+  margin-bottom: 30px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: $primary-color1;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.4rem;
+  }
+}
+
+.details-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 1.1rem;
+
+  @media (max-width: 768px) {
+    gap: 12px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 10px;
+  }
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}
+
+strong {
+  color: $primary-color;
+  font-weight: 600;
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
+}

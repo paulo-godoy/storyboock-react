@@ -1,0 +1,109 @@
+@import "../../styles/global.scss";
+
+.dragon-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 8px;
+    gap: 10px;
+  }
+
+  .buttons-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+
+    @media (max-width: 480px) {
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+  }
+
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    @media (max-width: 768px) {
+      gap: 15px;
+    }
+
+    @media (max-width: 480px) {
+      gap: 10px;
+    }
+
+    .dragon-card {
+      display: flex;
+      flex-direction: column;
+      background-color: $light-color;
+      border-radius: 8px;
+      border: 1px solid $light-color8;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 16px;
+      width: 100%;
+      max-width: 400px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      @media (min-width: 1024px) {
+        max-width: 500px;
+      }
+
+      @media (max-width: 768px) {
+        max-width: 100%;
+        padding: 12px;
+      }
+
+      @media (max-width: 480px) {
+        padding: 10px;
+        margin: 8px 0;
+      }
+    }
+  }
+
+  .create-dragon-button,
+  .logout-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+    @media (max-width: 480px) {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+
+  .create-dragon-button {
+    background-color: $success-color;
+    color: $light-color;
+
+    &:hover {
+      background-color: $success-color2;
+    }
+  }
+
+  .logout-button {
+    background-color: $danger-color;
+    color: $light-color;
+
+    &:hover {
+      background-color: $danger-color2;
+    }
+  }
+}

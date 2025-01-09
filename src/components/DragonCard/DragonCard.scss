@@ -1,0 +1,119 @@
+@import "../../styles/global.scss";
+
+.dragon-card {
+  background-color: $light-color;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid $light-color1;
+
+  @media (max-width: 1024px) {
+    max-width: 80%;
+    padding: 15px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+.dragon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+.card-header h3 {
+  font-size: 1.25rem;
+  color: $dark-color;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+.card-type {
+  font-size: 0.875rem;
+  color: $light-color2;
+  background-color: $light-color3;
+  padding: 5px 10px;
+  border-radius: 5px;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+}
+
+.created-at {
+  font-size: 0.875rem;
+  color: $dark-color1;
+  margin-top: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
+}
+
+.actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+.actions button {
+  padding: 8px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  @media (max-width: 768px) {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+.actions .edit-btn {
+  background-color: $success-color;
+  color: $light-color;
+
+  &:hover {
+    background-color: $success-color2;
+    transform: scale(1.05);
+  }
+}
+
+.actions .delete-btn {
+  background-color: $danger-color;
+  color: $light-color;
+
+  &:hover {
+    background-color: $danger-color2;
+    transform: scale(1.05);
+  }
+}

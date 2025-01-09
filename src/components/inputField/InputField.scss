@@ -1,0 +1,56 @@
+@import "../../styles/global.scss";
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  @media (max-width: 768px) {
+    gap: 4px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 3px;
+  }
+}
+
+.input-field label {
+  font-size: 1.1rem;
+  color: $dark-color;
+  font-weight: 500;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
+}
+
+.input-field input {
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  border: 2px solid $dark-color1;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: $light-color;
+  transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    padding: 12px 18px;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+.input-field input:focus {
+  border-color: $primary-color;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+  outline: none;
+}
