@@ -1,5 +1,6 @@
 import React from "react";
 import "./DragonCard.scss";
+import moment from "moment";
 
 interface DragonCardProps {
   name: string;
@@ -17,9 +18,9 @@ export const DragonCard: React.FC<DragonCardProps> = ({
   onDelete,
 }) => {
   const displayDate =
-    createdAt && !isNaN(new Date(createdAt).getTime())
-      ? new Date(createdAt).toLocaleDateString()
-      : new Date().toLocaleDateString();
+    createdAt && moment(createdAt, moment.ISO_8601, true).isValid()
+      ? moment(createdAt).local().format("DD/MM/YYYY")
+      : "Data inválida";
 
   return (
     <div className="dragon-card">
