@@ -19,12 +19,14 @@ const Login: React.FC = () => {
       <h1>Login</h1>
       <form onSubmit={handleLogin}>
         <InputField
+          id="username"
           label="Usuário"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
         />
         <InputField
+          id="password"
           label="Senha"
           type="password"
           value={password}
